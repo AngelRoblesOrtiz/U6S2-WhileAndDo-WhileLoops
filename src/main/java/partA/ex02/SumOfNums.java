@@ -4,7 +4,17 @@ import java.util.Scanner;
 
 public class SumOfNums {
     public static String sum(){
-        String response ="";
+        Scanner scanner = new Scanner(System.in);
+        String response = "";
+        int count = 0;
+        int num = 0;
+
+        while (count < 10) {
+            System.out.println("Enter number below: ");
+            num += scanner.nextInt();
+            count++;
+        }
+        response += "Total sum of 10 numbers is " + num;
 
         return response;
     }

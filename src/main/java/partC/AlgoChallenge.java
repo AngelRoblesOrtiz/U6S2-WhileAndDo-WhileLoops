@@ -16,8 +16,16 @@ public class AlgoChallenge {
      */
 
     public static Boolean checkPosOrNeg(int a, int b, boolean negative) {
+        boolean response;
 
-        return null;
+        if (negative) {
+            response = true;
+        } else if (a < 0 || b < 0) {
+            response = true;
+        } else {
+            response = false;
+        }
+        return response;
     }
 
 
@@ -33,8 +41,16 @@ public class AlgoChallenge {
      */
 
     public static String exchange(String str) {
-
-        return null;
+        String response = "";
+        if (str.length() == 1) {
+            response = str;
+            return response;
+        }
+        String firstLetter = str.substring(0, 1);
+        String lastLetter = str.substring((str.length() - 1), (str.length()));
+        String body = str.substring(1, (str.length() - 1));
+        response += lastLetter + body + firstLetter;
+        return response;
     }
 
 }
